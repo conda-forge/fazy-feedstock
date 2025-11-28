@@ -1,5 +1,5 @@
 {% set name = "fazy" %}
-{% set version = "0.0.10" %}
+{% set version = "0.0.11" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fazy-{{ version }}.tar.gz
-  sha256: 3967af59c14fd4372a2e10af4ef1be96ce5ab8aa36e6c3fe57c92cdd91ace22f
+  sha256: b069171ddadfccd2a823a6a94fb3149c8805807f614099d46f499ab427d8c1b5
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
